@@ -437,7 +437,7 @@ withAutoCompleteString:(NSString *)string
         }
         
         [self.superview bringSubviewToFront:self];
-        UIView *rootView = [self.window.subviews objectAtIndex:0];
+        UIView *rootView = self.window.subviews.lastObject;
         [rootView insertSubview:self.autoCompleteTableView
                          belowSubview:self];
         [self.autoCompleteTableView setUserInteractionEnabled:YES];
